@@ -6,9 +6,9 @@ namespace Ramon\OcpPratica;
 
 class GeradorDeArquivos
 {
-    public function gerarArquivos(array $arquivos): void
+    public function gerarArquivos(ListaDeArquivos $arquivos): void
     {
-        foreach ($arquivos as $arquivo) {
+        foreach ($arquivos->todos() as $arquivo) {
             $arquivo->gerar();
         }
     }
